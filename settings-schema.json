@@ -1,0 +1,47 @@
+{
+    "time_size": {
+        "type": "spinbutton",
+        "default": 40,
+        "min": 10,
+        "max": 200,
+        "units": "pt",
+        "description" : "Time text size.",
+        "step": 1
+    },
+    "date_size": {
+        "type": "spinbutton",
+        "default": 15,
+        "min": 10,
+        "max": 200,
+        "units": "pt",
+        "description" : "Date text size.",
+        "step": 1
+    },
+    "is_show_date" : {
+        "type" : "switch",
+        "default" : false,
+        "description": "Is Display Date?"
+    },
+    "is_show_tz" : {
+        "type" : "switch",
+        "default" : false,
+        "description": "Is Display TZ?"
+    },
+    "time_zone": {
+        "type": "entry",
+        "default": "",
+        "description": "Time Zone Name",
+        "tooltip" : "IANA Timezone Name"
+    },
+    "is_show_label": {
+        "type" : "switch",
+        "default" : false,
+        "description": "Is Display Label?"
+    },
+    "label": {
+        "type": "entry",
+        "dependency" : "is_show_label",
+        "default": "",
+        "description": "Text."
+    }
+}

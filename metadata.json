@@ -1,0 +1,9 @@
+{
+    "description": "Digital Clock With Date And Time Zone",
+    "prevent-decorations": false,
+    "uuid": "digital-tz-clock@sokol",
+    "name": "Digital Clock",
+    "author": "Alexandr Sokolov",
+    "max-instances": "100",
+    "icon": "icon.png"
+}
