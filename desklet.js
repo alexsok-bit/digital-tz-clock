@@ -19,8 +19,6 @@ const PopupMenu = imports.ui.popupMenu;
 const Util = imports.misc.util;
 const Settings = imports.ui.settings;
 
-const UUID = "digital-tz-clock@sokol";
-
 
 function MyDesklet(metadata, desklet_id){
     this._init(metadata, desklet_id);
@@ -152,6 +150,7 @@ MyDesklet.prototype = {
             this.timeout = Mainloop.timeout_add_seconds(1, Lang.bind(this, this._update_date));
         }
         catch (error) {
+            Mainloop.source_remove(this.timeout);
             this.timeout = Mainloop.timeout_add_seconds(10, Lang.bind(this, this._update_date));
             global.log("Error with _update_date: " + error);
         }
