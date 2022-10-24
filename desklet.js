@@ -139,11 +139,7 @@ MyDesklet.prototype = {
 
     _update_date: function(){
         try {
-            // let timeFormat = '%H:%M';
-            // let dateFormat = '%A,%e %B';
             let displayDate = new Date();
-
-
             this._time.set_text(displayDate.toLocaleTimeString(this._time_locale, this._time_opts));
             this._date.set_text(displayDate.toLocaleDateString(this._time_locale, this._date_opts));
             this._tz.set_text(this.__time_zone || "Local time");
